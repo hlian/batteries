@@ -1,0 +1,19 @@
+[ui]
+username = hlian
+merge = internal:merge
+
+[extensions]
+hgext.mq =
+hgext.graphlog =
+record =
+bookmarks =
+rebase =
+hgsubversion =
+
+[trusted]
+users = ajs hao ethan
+groups = brain nims
+
+[bookmarks]
+track.current = True
+
