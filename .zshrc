@@ -17,6 +17,7 @@ alias -g  D='>| /tmp/diff.diff'
 alias    up='sudo aptitude update && sudo aptitude full-upgrade && sudo aptitude autoclean'
 alias -g mount-desktop='mount -t vboxsf Desktop /home/me/remote/desktop'
 alias bochs='bochs -q'
+alias -g a='aptitude' 
 
 # Completion. ####################
 zstyle :compinstall filename '/home/me/.zshrc'
