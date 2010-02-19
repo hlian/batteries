@@ -1,2 +1,3 @@
 urxvt*font: xft:Inconsolata-12
+urxvt*saveLines: 100000
 emacs*font: Inconsolata-12
