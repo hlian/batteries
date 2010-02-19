@@ -8,12 +8,6 @@ hgext.graphlog =
 record =
 bookmarks =
 rebase =
-hgsubversion =
 
-[trusted]
-users = ajs hao ethan
-groups = brain nims
-
-[bookmarks]
-track.current = True
-
+[diff]
+git = True
