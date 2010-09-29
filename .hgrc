@@ -8,6 +8,8 @@ hgext.graphlog =
 record =
 bookmarks =
 rebase =
+kilnauth = ~/kilnauth.py
+purge =
 
 [diff]
 git = True
