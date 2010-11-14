@@ -9,7 +9,7 @@ setopt noclobber hist_verify noflowcontrol menu_complete
 # Aliases. ####################
 bindkey -e
 alias     u='cd ..'
-alias    ls='ls --color=tty -Ap'
+alias    ls='ls -Ap'
 alias     p='python'
 alias    nv='. env/bin/activate'
 alias screen='screen -R'
@@ -18,7 +18,9 @@ alias -g  D='>| /tmp/diff.diff'
 alias    up='sudo aptitude update && sudo aptitude full-upgrade && sudo aptitude autoclean'
 alias -g mount-desktop='mount -t vboxsf Desktop /home/me/remote/desktop'
 alias bochs='bochs -q'
-alias -g a='aptitude'
+alias wget='wget --no-check-certificate'
+alias d='dirs -v'
+alias vpn='ssh -ND 9999'
 
 # Completion. ####################
 zstyle :compinstall filename '/home/me/.zshrc'
@@ -53,3 +55,6 @@ export SAVEHIST=100000
 export WORDCHARS=
 export PYTHONPATH=
 export PATH=$PATH:/usr/local/bin
+
+export CLICOLOR=1
+export PATH=/opt/local/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
