@@ -1,4 +1,5 @@
 # Set! Up! ####################
+source ~/.zshrc-here
 autoload -Uz compinit
 autoload colors
 compinit; colors
@@ -8,8 +9,16 @@ setopt noclobber hist_verify noflowcontrol menu_complete
 
 # Aliases. ####################
 bindkey -e
+if [[ WINDOWS -eq 1 ]] then
+    alias    ls='ls -Ap --color'
+else
+    alias    ls='ls -Ap'
+    alias emacs='/Applications/Emacs.app/Contents/MacOS/Resources/Emacs -nw'
+    alias   vpn='ssh -ND 9999 -f -C'
+    alias  ssht='networksetup -setsocksfirewallproxystate Airport'
+fi
+
 alias     u='cd ..'
-alias    ls='ls -Ap'
 alias    ll='ls -l'
 alias     p='python'
 alias    nv='. env/bin/activate'
@@ -21,11 +30,9 @@ alias -g mount-desktop='mount -t vboxsf Desktop /home/me/remote/desktop'
 alias bochs='bochs -q'
 alias wget='wget --no-check-certificate'
 alias d='dirs -v'
-alias vpn='ssh -ND 9999 -f -C'
-alias ssht='networksetup -setsocksfirewallproxystate Airport'
 alias telnet='rlwrap telnet'
 alias sml='rlwrap sml'
-alias emacs='/Applications/Emacs.app/Contents/MacOS/Resources/Emacs -nw'
+alias reload='. ~/.zshrc'
 
 # Completion. ####################
 zstyle :compinstall filename '/home/me/.zshrc'
@@ -47,7 +54,8 @@ sog() {
 export TERM=xterm-256color
 
 case $TERM in (xterm*|rxvt|screen|rxvt-unicode|rxvt-cygwin-native)
-    export PS1="%{$reset_color$bold_color$fg[green]%}%~ %{$reset_color%}"
+    export PS1="
+%{$reset_color$bold_color$fg[green]%}%~ %{$reset_color%}"
     precmd() { print -Pn "\e]0; %~\a" } ;;
 esac
 
