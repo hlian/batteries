@@ -5,11 +5,15 @@ merge = internal:merge
 [extensions]
 hgext.mq =
 hgext.graphlog =
+hgext.churn =
 record =
 bookmarks =
 rebase =
-kilnauth = ~/kilnauth.py
 purge =
 
 [diff]
 git = True
+
+[alias]
+slog = log --style=/Users/me/mercurial-cli/map-cmdline.slog
+sglog = glog --style=/Users/me/mercurial-cli/map-cmdline.sglog
