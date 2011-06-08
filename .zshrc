@@ -10,6 +10,7 @@ setopt noclobber hist_verify noflowcontrol menu_complete
 bindkey -e
 alias     u='cd ..'
 alias    ls='ls -Ap'
+alias    ll='ls -l'
 alias     p='python'
 alias    nv='. env/bin/activate'
 alias screen='screen -R'
@@ -20,7 +21,11 @@ alias -g mount-desktop='mount -t vboxsf Desktop /home/me/remote/desktop'
 alias bochs='bochs -q'
 alias wget='wget --no-check-certificate'
 alias d='dirs -v'
-alias vpn='ssh -ND 9999'
+alias vpn='ssh -ND 9999 -f -C'
+alias ssht='networksetup -setsocksfirewallproxystate Airport'
+alias telnet='rlwrap telnet'
+alias sml='rlwrap sml'
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Resources/Emacs -nw'
 
 # Completion. ####################
 zstyle :compinstall filename '/home/me/.zshrc'
@@ -54,7 +59,7 @@ export SAVEHIST=100000
 # Variables and shakers. ####################
 export WORDCHARS=
 export PYTHONPATH=
-export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/local/bin:/Users/me/.cabal/bin
 
 export CLICOLOR=1
 export PATH=/opt/local/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
