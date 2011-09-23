@@ -33,6 +33,8 @@ set expandtab
 set encoding=utf-8
 set relativenumber " relative line number numbering for fast moves
 set backspace=indent,eol,start
+set listchars=tab:>-,trail:~,extends:>,precedes:<
+set list
 
 set history=1000
 set undolevels=1000
