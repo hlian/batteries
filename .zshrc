@@ -1,5 +1,4 @@
 # Set! Up! ####################
-source ~/.zshrc-here
 autoload -Uz compinit
 autoload colors
 compinit; colors
@@ -71,3 +70,7 @@ export PATH=$PATH:/usr/local/bin:/Users/me/.cabal/bin
 
 export CLICOLOR=1
 export PATH=/opt/local/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
+
+# Other people. ####################
+source ~/.zshrc-here
+
