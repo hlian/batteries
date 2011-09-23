@@ -13,6 +13,4 @@ purge =
 [diff]
 git = True
 
-[alias]
-slog = log --style=/Users/me/mercurial-cli/map-cmdline.slog
-sglog = glog --style=/Users/me/mercurial-cli/map-cmdline.sglog
+%include ~/.hgrc-here
