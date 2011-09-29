@@ -13,4 +13,8 @@ purge =
 [diff]
 git = True
 
+[alias]
+r = record
+n = push --rev .
+
 %include ~/.hgrc-here
