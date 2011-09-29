@@ -1,6 +1,7 @@
 [ui]
 username = hlian
 merge = internal:merge
+usehttp2 = True
 
 [extensions]
 mq =
