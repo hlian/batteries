@@ -1,6 +1,7 @@
 [ui]
 username = hlian
 merge = internal:merge
+usehttp2 = True
 
 [extensions]
 mq =
@@ -9,6 +10,7 @@ record =
 bookmarks =
 rebase =
 purge =
+color =
 
 [diff]
 git = True
