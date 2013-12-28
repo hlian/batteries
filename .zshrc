@@ -27,6 +27,8 @@ alias telnet='rlwrap telnet'
 alias sml='rlwrap sml'
 alias reload='. ~/.zshrc'
 
+alias install-zsh-syntax-highlighting='cd ~/.oh-my-zsh/plugins && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git'
+
 export HISTSIZE=100000
 export SAVEHIST=100000
 
