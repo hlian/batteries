@@ -1,3 +1,8 @@
-urxvt*font: xft:Inconsolata-11
+urxvt*font: xft:Monaco-10
 urxvt*saveLines: 100000
-emacs*font: Inconsolata-11
+emacs*font: Monaco-10
+
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hintstyle: hintfull
+Xft.hinting: true
