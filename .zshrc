@@ -1,9 +1,9 @@
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="robbyrussell"
+ZSH_THEME="blinks"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-plugins=(git mercurial zsh-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting colored-man)
 source $ZSH/oh-my-zsh.sh
 
 # Aliases. ####################
