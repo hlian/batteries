@@ -66,10 +66,12 @@ export SAVEHIST=100000
 # Variables and shakers. ####################
 export WORDCHARS=
 export PYTHONPATH=
+export PYTHONSTARTUP=$HOME/.pythonstartup.py
 export PATH=$PATH:/usr/local/bin:/Users/me/.cabal/bin
 
 export CLICOLOR=1
 export PATH=/opt/local/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
+export OCEAN=162.243.55.6
 
 # Other people. ####################
 source ~/.zshrc-here
