@@ -8,7 +8,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases. ####################
 bindkey -e
-alias l='ls -Ap --color'
+alias l='ls -Ap'
 alias ll='l -l'
 alias   vpn='ssh -ND 9999 -f -C'
 alias  ssht='networksetup -setsocksfirewallproxystate Airport'
@@ -34,9 +34,11 @@ export SAVEHIST=100000
 
 export WORDCHARS=
 export PYTHONPATH=
+export PYTHONSTARTUP=$HOME/.pythonstartup.py
 export PATH=$PATH:/usr/local/bin:/Users/me/.cabal/bin
 export CLICOLOR=1
 export PATH=/opt/local/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
+export OCEAN=162.243.55.6
 
 # Set! Up! ####################
 setopt incappendhistory sharehistory
