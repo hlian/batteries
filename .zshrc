@@ -8,7 +8,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases. ####################
 bindkey -e
-alias l='ls -Ap --color'
+alias l='ls -Ap'
 alias ll='l -l'
 alias   vpn='ssh -ND 9999 -f -C'
 alias  ssht='networksetup -setsocksfirewallproxystate Airport'
