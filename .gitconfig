@@ -1,14 +1,22 @@
 [push]
 	default = current
 [alias]
-	ci = commit
+	ci = commit --verbose
 	co = checkout
 	b = branch -vv
 	ll = log --graph --pretty=format:'%w(100,0,10)%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all -20
 	l = log --graph --pretty=format:'%w(100,0,10)%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -20
 	d = diff
+	dd = diff --cached
 	s = status
 [core]
 	pager = less -XFR
+	abbrev = 4
+	excludesfile = ~/.gitignore_global
 [include]
 	path = ~/.gitconfig.local
+[credential]
+	helper = osxkeychain
+[user]
+	email = me@haolian.org
+	name = Hao Lian
