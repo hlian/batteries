@@ -1,3 +1,15 @@
+if [[ ! -d ~/.oh-my-zsh ]]; then
+    pushd ~
+    git clone https://github.com/robbyrussell/oh-my-zsh
+    popd
+fi
+
+if [[ ! -d ~/.oh-my-zsh/plugins/zsh-syntax-highlighting ]]; then
+    pushd ~/.oh-my-zsh/plugins
+    git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+    popd
+fi
+
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="blinks"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
@@ -10,24 +22,15 @@ source $ZSH/oh-my-zsh.sh
 bindkey -e
 alias l='ls -Ap'
 alias ll='l -l'
-alias   vpn='ssh -ND 9999 -f -C'
-alias  ssht='networksetup -setsocksfirewallproxystate Airport'
 alias     u='cd ..'
 alias     p='python'
 alias    nv='. env/bin/activate'
 alias screen='screen -R'
 alias -g  L='|& less -R'
 alias -g  D='>| /tmp/diff.diff'
-alias    up='sudo aptitude update && sudo aptitude full-upgrade && sudo aptitude autoclean'
-alias -g mount-desktop='mount -t vboxsf Desktop /home/me/remote/desktop'
-alias bochs='bochs -q'
 alias wget='wget --no-check-certificate'
-alias d='dirs -v'
 alias telnet='rlwrap telnet'
-alias sml='rlwrap sml'
 alias reload='. ~/.zshrc'
-
-alias install-zsh-syntax-highlighting='cd ~/.oh-my-zsh/plugins && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git'
 
 export HISTSIZE=100000
 export SAVEHIST=100000
