@@ -9,12 +9,17 @@
 	d = diff
 	dd = diff --cached
 	s = status
+	pb = push build
+	pd = !sh -c 'git branch -d $0 && git push build :$0'
 [core]
 	pager = less -XFR
+	editor = mvim -v
 	abbrev = 4
 	excludesfile = ~/.gitignore_global
 [include]
 	path = ~/.gitconfig.local
+[rerere]
+	enabled = true
 [credential]
 	helper = osxkeychain
 [user]
