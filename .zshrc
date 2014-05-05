@@ -11,12 +11,13 @@ if [[ ! -d ~/.oh-my-zsh/plugins/zsh-syntax-highlighting ]]; then
 fi
 
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="blinks"
+ZSH_THEME="jreese"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 plugins=(git zsh-syntax-highlighting colored-man)
 source $ZSH/oh-my-zsh.sh
+export PS1=$'\n'$PS1
 
 # Aliases. ####################
 bindkey -e
@@ -26,7 +27,7 @@ alias     u='cd ..'
 alias     p='python'
 alias    nv='. env/bin/activate'
 alias screen='screen -R'
-alias -g  L='|& less -R'
+alias -g  L='|& less'
 alias -g  D='>| /tmp/diff.diff'
 alias wget='wget --no-check-certificate'
 alias telnet='rlwrap telnet'
@@ -41,12 +42,15 @@ export PYTHONSTARTUP=$HOME/.pythonstartup.py
 export PATH=$PATH:/usr/local/bin:/Users/me/.cabal/bin
 export CLICOLOR=1
 export PATH=/opt/local/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
+export LESS=-Ri
+export LSCOLORS=ExFxCxDxBxegedabagacad
 export OCEAN=162.243.55.6
 
 # Set! Up! ####################
 setopt incappendhistory sharehistory
 setopt autocd extendedglob nomatch auto_pushd nobeep
 setopt noclobber hist_verify noflowcontrol menu_complete
+unsetopt case_glob
 
 # Other people. ####################
 source ~/.zshrc-here
