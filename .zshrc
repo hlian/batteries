@@ -11,7 +11,8 @@ if [[ ! -d ~/.oh-my-zsh/plugins/zsh-syntax-highlighting ]]; then
 fi
 
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="jreese"
+ZSH_THEME="blinks"
+SOLARIZED_THEME="light"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
