@@ -1,10 +1,11 @@
 if [[ ! -d ~/.oh-my-zsh ]]; then
     pushd ~
-    git clone https://github.com/robbyrussell/oh-my-zsh
+    git clone https://github.com/robbyrussell/oh-my-zsh .oh-my-zsh
     popd
 fi
 
 if [[ ! -d ~/.oh-my-zsh/plugins/zsh-syntax-highlighting ]]; then
+    mkdir ~/.oh-my-zsh/plugins
     pushd ~/.oh-my-zsh/plugins
     git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
     popd
