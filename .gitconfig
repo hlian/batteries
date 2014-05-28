@@ -15,7 +15,7 @@
     up = !sh -c 'git fetch && git remote prune origin'
 [core]
 	pager = less -XFR
-	editor = mvim -v
+	editor = vim
 	abbrev = 4
 	excludesfile = ~/.gitignore_global
 [include]
