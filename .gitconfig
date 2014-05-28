@@ -9,8 +9,10 @@
 	d = diff
 	dd = diff --cached
 	s = status
-	pb = push build
-	pd = !sh -c 'git branch -d $0 && git push build :$0'
+	pd = !sh -c 'git branch -d $0 && git push origin :$0'
+    a = commit --amend
+    rc = rebase --cont
+    up = !sh -c 'git fetch && git remote prune origin'
 [core]
 	pager = less -XFR
 	editor = mvim -v
