@@ -25,5 +25,4 @@
 [credential]
 	helper = osxkeychain
 [user]
-	email = me@haolian.org
 	name = Hao Lian
