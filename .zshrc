@@ -33,6 +33,7 @@ alias -g  D='>| /tmp/diff.diff'
 alias wget='wget --no-check-certificate'
 alias telnet='rlwrap telnet'
 alias reload='. ~/.zshrc'
+alias v='vim'
 
 export HISTSIZE=100000
 export SAVEHIST=100000
@@ -40,9 +41,7 @@ export SAVEHIST=100000
 export WORDCHARS=
 export PYTHONPATH=
 export PYTHONSTARTUP=$HOME/.pythonstartup.py
-export PATH=$PATH:/usr/local/bin:/Users/me/.cabal/bin
 export CLICOLOR=1
-export PATH=/opt/local/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
 export LESS=-Ri
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export OCEAN=162.243.55.6
@@ -55,3 +54,14 @@ unsetopt case_glob
 
 # Other people. ####################
 source ~/.zshrc-here
+
+# http://serverfault.com/questions/192499/prune-duplicate-entries-from-path-variable
+if [[ -d /usr/local/bin ]]; then
+    export PATH=/usr/local/bin:$PATH
+fi
+
+if [[ -d $HOME/.cabal/bin ]]; then
+    export PATH=$HOME/.cabal/bin:$PATH
+fi
+
+typeset -U PATH

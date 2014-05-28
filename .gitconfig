@@ -13,7 +13,7 @@
 	pd = !sh -c 'git branch -d $0 && git push build :$0'
 [core]
 	pager = less -XFR
-	editor = mvim -v
+	editor = vim
 	abbrev = 4
 	excludesfile = ~/.gitignore_global
 [include]
