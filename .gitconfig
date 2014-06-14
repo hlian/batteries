@@ -4,8 +4,8 @@
 	ci = commit --verbose
 	co = checkout
 	b = branch -vv
-	ll = log --graph --pretty=format:'%w(100,0,10)%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all -20
 	l = log --graph --pretty=format:'%w(100,0,10)%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -20
+	ll = l --all
 	d = diff
 	dd = diff --cached
 	s = status

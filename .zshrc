@@ -52,6 +52,7 @@ setopt incappendhistory sharehistory
 setopt autocd extendedglob nomatch auto_pushd nobeep
 setopt noclobber hist_verify noflowcontrol menu_complete
 unsetopt case_glob
+compdef -d git
 
 # Other people. ####################
 source ~/.zshrc-here

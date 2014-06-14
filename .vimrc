@@ -9,7 +9,7 @@ set showmatch " parentheses
 set title " change terminal's title
 set visualbell
 set noerrorbells
-set backupdir=~/tmp
+set backupdir=/tmp
 
 set ignorecase
 set smartcase
