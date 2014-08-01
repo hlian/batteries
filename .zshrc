@@ -35,7 +35,7 @@ alias wget='wget --no-check-certificate'
 alias telnet='rlwrap telnet'
 alias reload='. ~/.zshrc'
 alias v='vim'
-alias ci=cabal install --disable-documentation --disable-executable-profiling --disable-library-coverage --disable-benchmarks --disable-library-profiling -j
+alias ci='cabal install --disable-documentation --disable-executable-profiling --disable-library-coverage --disable-benchmarks --disable-library-profiling -j'
 
 export HISTSIZE=100000
 export SAVEHIST=100000
@@ -53,6 +53,8 @@ setopt incappendhistory sharehistory
 setopt autocd extendedglob nomatch auto_pushd nobeep
 setopt noclobber hist_verify noflowcontrol menu_complete
 unsetopt case_glob
+# https://github.com/robbyrussell/oh-my-zsh/issues/449
+unsetopt nomatch
 compdef -d git
 
 # Other people. ####################
@@ -68,3 +70,9 @@ if [[ -d $HOME/.cabal/bin ]]; then
 fi
 
 typeset -U PATH
+
+if [[ ! -d ~/.fzf ]]; then
+    git clone https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
+fi
+source ~/.fzf.zsh
