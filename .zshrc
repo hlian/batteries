@@ -47,6 +47,7 @@ export CLICOLOR=1
 export LESS=-Ri
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export OCEAN=162.243.55.6
+export EDITOR=vim
 
 # Set! Up! ####################
 setopt incappendhistory sharehistory
@@ -57,9 +58,6 @@ unsetopt case_glob
 unsetopt nomatch
 compdef -d git
 
-# Other people. ####################
-source ~/.zshrc-here
-
 # http://serverfault.com/questions/192499/prune-duplicate-entries-from-path-variable
 if [[ -d /usr/local/bin ]]; then
     export PATH=/usr/local/bin:$PATH
@@ -69,10 +67,13 @@ if [[ -d $HOME/.cabal/bin ]]; then
     export PATH=$HOME/.cabal/bin:$PATH
 fi
 
-typeset -U PATH
-
 if [[ ! -d ~/.fzf ]]; then
     git clone https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install
 fi
 source ~/.fzf.zsh
+
+typeset -U PATH
+
+# Other people. ####################
+source ~/.zshrc-here
