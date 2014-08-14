@@ -31,11 +31,13 @@ alias    nv='. env/bin/activate'
 alias screen='screen -R'
 alias -g  L='|& less'
 alias -g  D='>| /tmp/diff.diff'
+alias -g  B='$(git branch | fzf +s +m)'
 alias wget='wget --no-check-certificate'
 alias telnet='rlwrap telnet'
 alias reload='. ~/.zshrc'
 alias v='vim'
 alias ci='cabal install --disable-documentation --disable-executable-profiling --disable-library-coverage --disable-benchmarks --disable-library-profiling -j'
+alias e='open -a Emacs'
 
 export HISTSIZE=100000
 export SAVEHIST=100000

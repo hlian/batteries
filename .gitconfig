@@ -11,6 +11,7 @@
 	s = status
 	pd = !sh -c 'git branch -d $0 && git push origin :$0'
     a = commit --amend
+    ri = rebase -i
     rc = rebase --cont
     up = !sh -c 'git fetch && git remote prune origin'
 [core]
