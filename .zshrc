@@ -75,7 +75,7 @@ if [[ $TERM_PROGRAM =~ iTerm.app ]]; then
     export EDITOR='/Applications/Emacs.app/Contents/MacOS/Emacs -nw --no-desktop'
     alias e='open -a Emacs'
 else
-    epxort EDITOR='emacs'
+    export EDITOR='emacs'
     alias e='emacs'
 fi
 
