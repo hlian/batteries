@@ -75,8 +75,16 @@ if [[ $TERM_PROGRAM =~ iTerm.app ]]; then
     export EDITOR='/Applications/Emacs.app/Contents/MacOS/Emacs -nw --no-desktop'
     alias e='open -a Emacs'
 else
-    export EDITOR='emacs'
-    alias e='emacs'
+    export EDITOR='emacs --no-desktop'
+    alias e='emacs --no-desktop'
+fi
+
+if which ruby >/dev/null && which gem >/dev/null; then
+    export PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+fi
+
+if [[ -d ~/.cask/bin ]]; then
+    export PATH="$HOME/.cask/bin:$PATH"
 fi
 
 source ~/.fzf.zsh
