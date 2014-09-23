@@ -32,6 +32,8 @@ alias telnet='rlwrap telnet'
 alias reload='. ~/.zshrc'
 alias v='vim'
 alias ci='cabal install --disable-documentation --disable-executable-profiling --disable-library-coverage --disable-benchmarks --disable-library-profiling -j'
+# http://dev.stephendiehl.com/hask/#data-formats
+alias ghci-core="ghci -ddump-simpl -dsuppress-idinfo -dsuppress-coercions -dsuppress-type-applications -dsuppress-uniques -dsuppress-module-prefixes"
 
 export HISTSIZE=100000
 export SAVEHIST=100000
