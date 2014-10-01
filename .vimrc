@@ -9,6 +9,9 @@ set showmatch " parentheses
 set title " change terminal's title
 set visualbell
 set noerrorbells
+set ch=2 " command-line height
+set laststatus=2 " always show status bar
+set wrapscan " wrap search
 set backupdir=/tmp
 
 set ignorecase
@@ -18,6 +21,7 @@ set gdefault
 set incsearch
 set showmatch
 set hlsearch
+
 " Python/Perl regex syntax
 nnoremap / /\v
 vnoremap / /\v
