@@ -89,6 +89,12 @@ if [[ -d ~/.cask/bin ]]; then
     export PATH="$HOME/.cask/bin:$PATH"
 fi
 
+function bigbrew() {
+    brew install caskroom/homebrew-task
+    brew tap caskroom/fonts
+    brew cask install google-chrome dropbox skim vlc transmission textwrangler caffeine spectacle
+}
+
 source ~/.fzf.zsh
 source ~/.zshrc-here
 typeset -U PATH
