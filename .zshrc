@@ -73,8 +73,8 @@ if [[ ! -d ~/.fzf ]]; then
 fi
 
 if [[ $TERM_PROGRAM =~ iTerm.app ]]; then
-    alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw --no-desktop'
-    export EDITOR='/Applications/Emacs.app/Contents/MacOS/Emacs -nw --no-desktop'
+    alias emacs='~/Applications/Emacs.app/Contents/MacOS/Emacs -nw --no-desktop'
+    export EDITOR='~/Applications/Emacs.app/Contents/MacOS/Emacs -nw --no-desktop'
     alias e='open -a Emacs'
 else
     export EDITOR='emacs --no-desktop'
