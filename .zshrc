@@ -89,6 +89,10 @@ if [[ -d ~/.cask/bin ]]; then
     export PATH="$HOME/.cask/bin:$PATH"
 fi
 
+if [[ -d ~/.cabal/bin ]]; then
+    export PATH="$HOME/.cabal/bin:$PATH"
+fi
+
 function bigbrew() {
     brew install caskroom/homebrew-task
     brew tap caskroom/fonts
