@@ -35,9 +35,11 @@ if [[ ! -f $BREW_PATH ]]; then
 fi
 
 if [[ ! -f ~/.zshrc-cask-p ]]; then
-    apps=(dropbox google-chrome slack spotify iterm2 vlc transmission)
-    brew tap phinze/homebrew-cask
+    apps=(dropbox google-chrome slack spotify iterm2 vlc transmission dropbox skim transmission textwrangler caffeine spectacle spotify)
+    brew install caskroom/cask/brew-cask
+    brew tap caskroom/fonts
     brew install brew-cask
     brew cask install --appdir="/Applications" ${apps[@]}
+    brew cask install font-ubuntu
     touch ~/.zshrc-cask-p
 fi

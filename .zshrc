@@ -77,12 +77,6 @@ if [[ -d ~/.cabal/bin ]]; then
     export PATH="$HOME/.cabal/bin:$PATH"
 fi
 
-function bigbrew() {
-    brew install caskroom/homebrew-task
-    brew tap caskroom/fonts
-    brew cask install google-chrome dropbox skim vlc transmission textwrangler caffeine spectacle spotify slack
-}
-
 source ~/.fzf.zsh
 source ~/.zshrc-here
 typeset -U PATH
