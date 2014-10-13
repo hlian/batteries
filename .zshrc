@@ -96,7 +96,7 @@ fi
 function bigbrew() {
     brew install caskroom/homebrew-task
     brew tap caskroom/fonts
-    brew cask install google-chrome dropbox skim vlc transmission textwrangler caffeine spectacle
+    brew cask install google-chrome dropbox skim vlc transmission textwrangler caffeine spectacle spotify slack
 }
 
 source ~/.fzf.zsh
