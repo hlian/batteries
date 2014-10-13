@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 " http://nvie.com/posts/how-i-boosted-my-vim/
 let mapleader=","
 
@@ -13,6 +15,7 @@ set ch=2 " command-line height
 set laststatus=2 " always show status bar
 set wrapscan " wrap search
 set backupdir=/tmp
+set wildmenu " command-line autocompletion
 
 set ignorecase
 set smartcase
@@ -45,6 +48,7 @@ set history=1000
 set undolevels=1000
 
 syntax on
+filetype plugin indent on
 
 noremap ; :
 inoremap jj <ESC> " jj to go back to normal mode
