@@ -1,0 +1,43 @@
+#!/bin/zsh
+
+set -e
+
+if [[ ! -d ~/.oh-my-zsh ]]; then
+    pushd ~
+    git clone https://github.com/robbyrussell/oh-my-zsh .oh-my-zsh
+    popd
+fi
+
+if [[ ! -d ~/.oh-my-zsh/plugins/zsh-syntax-highlighting ]]; then
+    mkdir ~/.oh-my-zsh/plugins
+    pushd ~/.oh-my-zsh/plugins
+    git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+    popd
+fi
+
+if [[ ! -f ~/.vim/autoload/pathogen.vim ]]; then
+   mkdir -p ~/.vim/autoload ~/.vim/bundle
+   curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+fi
+
+if [[ ! -d ~/.vim/bundle/vim-airline ]]; then
+    git clone https://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
+fi
+
+if [[ ! -d ~/.fzf ]]; then
+    git clone https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
+fi
+
+BREW_PATH=$(which brew)
+if [[ ! -f $BREW_PATH ]]; then
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+if [[ ! -f ~/.zshrc-cask-p ]]; then
+    apps=(dropbox google-chrome slack spotify iterm2 vlc transmission)
+    brew tap phinze/homebrew-cask
+    brew install brew-cask
+    brew cask install --appdir="/Applications" ${apps[@]}
+    touch ~/.zshrc-cask-p
+fi

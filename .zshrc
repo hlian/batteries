@@ -1,15 +1,4 @@
-if [[ ! -d ~/.oh-my-zsh ]]; then
-    pushd ~
-    git clone https://github.com/robbyrussell/oh-my-zsh .oh-my-zsh
-    popd
-fi
-
-if [[ ! -d ~/.oh-my-zsh/plugins/zsh-syntax-highlighting ]]; then
-    mkdir ~/.oh-my-zsh/plugins
-    pushd ~/.oh-my-zsh/plugins
-    git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
-    popd
-fi
+zsh ~/.zshrc-install
 
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="blinks"
@@ -65,11 +54,6 @@ fi
 
 if [[ -d $HOME/.cabal/bin ]]; then
     export PATH=$HOME/.cabal/bin:$PATH
-fi
-
-if [[ ! -d ~/.fzf ]]; then
-    git clone https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install
 fi
 
 if [[ $TERM_PROGRAM =~ iTerm.app ]]; then
