@@ -15,7 +15,6 @@
     a = commit --amend
     ri = rebase -i
     rc = rebase --cont
-    ri = rebase -i
     rz = !sh -c 'git reset --soft HEAD^ && git reset HEAD .'
     up = !sh -c 'git fetch && git remote prune origin'
 [core]
