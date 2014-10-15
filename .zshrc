@@ -77,7 +77,7 @@ if [[ -d ~/.cabal/bin ]]; then
     export PATH="$HOME/.cabal/bin:$PATH"
 fi
 
-if [[ !-f ~/.zshrc-here ]]; then
+if [[ ! -f ~/.zshrc-here ]]; then
     touch ~/.zshrc-here
 fi
 
