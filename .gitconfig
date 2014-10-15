@@ -18,7 +18,7 @@
     rz = !sh -c 'git reset --soft HEAD^ && git reset HEAD .'
     up = !sh -c 'git fetch && git remote prune origin'
 [core]
-	pager = most
+	pager = less -FRX
 	editor = vim
 	abbrev = 4
 	excludesfile = ~/.gitignore_global
