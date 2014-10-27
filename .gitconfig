@@ -11,7 +11,8 @@
 	d = diff
 	dd = diff --cached
 	s = status
-	pd = !sh -c 'git branch -d $0 && git push origin :$0'
+	pd = !sh -c 'git branch -d $0 &&  git push origin :$0'
+	pddd = !sh -c 'git branch -D $0 && git push origin :$0'
     a = commit --amend
     ri = rebase -i
     rc = rebase --cont
