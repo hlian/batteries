@@ -14,7 +14,7 @@
 	pd = !sh -c 'git branch -d $0 &&  git push origin :$0'
 	pddd = !sh -c 'git branch -D $0 && git push origin :$0'
     a = commit --amend
-    ri = rebase -i
+    ri = rebase -i --autosquash
     rc = rebase --cont
     rz = !sh -c 'git reset --soft HEAD^ && git reset HEAD .'
     up = !sh -c 'git fetch && git remote prune origin'
@@ -23,8 +23,6 @@
 	editor = vim
 	abbrev = 4
 	excludesfile = ~/.gitignore_global
-[include]
-	path = ~/.gitconfig.local
 [rerere]
 	enabled = true
 [credential]
@@ -34,3 +32,5 @@
 	email = me@haolian.org
 [url "https://github.com/"]
   insteadOf = "g:"
+[include]
+	path = ~/.gitconfig.local
