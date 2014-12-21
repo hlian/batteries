@@ -26,6 +26,7 @@ alias ci='cabal install --disable-documentation --disable-executable-profiling -
 alias ghci-core="ghci -ddump-simpl -dsuppress-idinfo -dsuppress-coercions -dsuppress-type-applications -dsuppress-uniques -dsuppress-module-prefixes"
 alias dgit='git --git-dir ~/dotfiles/.git'
 alias g='git commit -vp'
+alias u='git submodule update'
 
 export HISTSIZE=100000
 export SAVEHIST=100000
