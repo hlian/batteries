@@ -26,6 +26,9 @@ alias ci='cabal install --disable-documentation --disable-executable-profiling -
 alias ghci-core="ghci -ddump-simpl -dsuppress-idinfo -dsuppress-coercions -dsuppress-type-applications -dsuppress-uniques -dsuppress-module-prefixes"
 alias dgit='git --git-dir ~/dotfiles/.git'
 alias g='git commit -vp'
+alias gc='git cherry-pick'
+alias gr='git rebase'
+alias gi='git rebase -i'
 
 export HISTSIZE=100000
 export SAVEHIST=100000
