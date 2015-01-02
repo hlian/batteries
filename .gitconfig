@@ -29,8 +29,11 @@
 	helper = osxkeychain
 [user]
 	name = Hao Lian
-	email = me@haolian.org
-[url "https://github.com/"]
-  insteadOf = "g:"
+	email = hi@haolian.org
 [include]
 	path = ~/.gitconfig.local
+
+[url "https://github.com/"]
+  insteadOf = "g:"
+[url "git@github.com:hlian"]
+  insteadOf = "f:"
