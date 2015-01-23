@@ -18,7 +18,7 @@
     up = !sh -c 'git fetch origin master:master && git remote prune origin'
 [core]
 	pager = less -FRX
-	editor = vim
+	editor = emacs --no-desktop
 	abbrev = 4
 	excludesfile = ~/.gitignore_global
 [rerere]
