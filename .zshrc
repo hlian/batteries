@@ -54,9 +54,12 @@ unsetopt case_glob
 unsetopt nomatch
 compdef -d git
 
-# http://serverfault.com/questions/192499/prune-duplicate-entries-from-path-variable
 if [[ -d /usr/local/bin ]]; then
     export PATH=/usr/local/bin:$PATH
+fi
+
+if [[ -d /usr/local/sbin ]]; then
+    export PATH=/usr/local/sbin:$PATH
 fi
 
 if [[ -d $HOME/.cabal/bin ]]; then
@@ -90,4 +93,5 @@ fi
 
 source ~/.fzf.zsh
 source ~/.zshrc-here
+# http://serverfault.com/questions/192499/prune-duplicate-entries-from-path-variable
 typeset -U PATH
