@@ -10,6 +10,22 @@ plugins=(git zsh-syntax-highlighting colored-man)
 source $ZSH/oh-my-zsh.sh
 export PS1=$'\n'$PS1
 
+setopt auto_pushd
+setopt autocd
+setopt extendedglob
+setopt hist_verify
+setopt incappendhistory
+setopt menu_complete
+setopt nobeep
+setopt noclobber
+setopt noflowcontrol
+setopt nomatch
+setopt sharehistory
+setopt rcquotes
+unsetopt case_glob
+unsetopt nomatch
+compdef -d git
+
 # Aliases. ####################
 bindkey -e
 alias l='ls -Ap'
@@ -38,21 +54,6 @@ export WORDCHARS=
 export CLICOLOR=1
 export LESS=-Ri
 export LSCOLORS=ExFxCxDxBxegedabagacad
-
-setopt auto_pushd
-setopt autocd
-setopt extendedglob
-setopt hist_verify
-setopt incappendhistory
-setopt menu_complete
-setopt nobeep
-setopt noclobber
-setopt noflowcontrol
-setopt nomatch
-setopt sharehistory
-unsetopt case_glob
-unsetopt nomatch
-compdef -d git
 
 if [[ -d /usr/local/bin ]]; then
     export PATH=/usr/local/bin:$PATH
