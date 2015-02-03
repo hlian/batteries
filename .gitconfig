@@ -16,6 +16,7 @@
     rc = rebase --cont
     rz = !sh -c 'git reset --soft HEAD^ && git reset HEAD .'
     up = !sh -c 'git fetch origin master:master && git remote prune origin'
+    fixup = commit --fixup
 [core]
 	pager = less -FRX
 	editor = emacs --no-desktop
