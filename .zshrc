@@ -42,6 +42,7 @@ alias ci='cabal install --disable-documentation --disable-coverage --disable-ben
 # http://dev.stephendiehl.com/hask/#data-formats
 alias ghci-core="ghci -ddump-simpl -dsuppress-idinfo -dsuppress-coercions -dsuppress-type-applications -dsuppress-uniques -dsuppress-module-prefixes"
 alias dgit='git --git-dir ~/dotfiles/.git'
+alias egit='git --git-dir ~/.emacs.d/.git'
 alias g='git commit -vp'
 alias gc='git cherry-pick'
 alias gr='git rebase'
