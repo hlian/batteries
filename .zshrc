@@ -6,7 +6,7 @@ SOLARIZED_THEME="light"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-plugins=(git zsh-syntax-highlighting colored-man)
+plugins=(git zsh-syntax-highlighting colored-man systemd)
 source $ZSH/oh-my-zsh.sh
 export PS1=$'\n'$PS1
 
