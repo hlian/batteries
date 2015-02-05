@@ -15,8 +15,8 @@
     ri = rebase -i --autosquash
     rc = rebase --cont
     rz = !sh -c 'git reset --soft HEAD^ && git reset HEAD .'
-    up = !sh -c 'git fetch origin master:master && git remote prune origin'
     fixup = commit --fixup
+    up = !sh -c 'git co -b tmp && git fetch -v origin master:master && git remote -v prune origin && git co - && git branch -d tmp'
 [core]
 	pager = less -FRX
 	editor = emacs --no-desktop
