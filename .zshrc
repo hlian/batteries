@@ -48,6 +48,7 @@ alias gc='git cherry-pick'
 alias gr='git rebase'
 alias gi='git rebase -i'
 alias u='git submodule update'
+alias gt='cd ~/lab/ios'
 
 export HISTSIZE=100000
 export SAVEHIST=100000
