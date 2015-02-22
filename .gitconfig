@@ -1,16 +1,16 @@
 # -*- mode: conf -*-
 
 [push]
-	default = current
+    default = current
 [alias]
-	ci = commit --verbose
-	co = checkout
-	b = branch -vv
-	l = log --graph --pretty=format:'%w(100,0,10)%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -20
-	ll = !sh -c \"git l --all $@\"
-	d = diff
-	dd = diff --cached
-	s = status
+    ci = commit --verbose
+    co = checkout
+    b = branch -vv
+    l = log --graph --pretty=format:'%w(100,0,10)%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -20
+    ll = !sh -c \"git l --all $@\"
+    d = diff
+    dd = diff --cached
+    s = status
     a = commit --amend
     ri = rebase -i --autosquash
     rc = rebase --cont
@@ -21,19 +21,19 @@
     rso = !sh -c \"git remote set-url origin $@\"
     rv = remote -v
 [core]
-	pager = less -FRX
-	editor = emacs --no-desktop
-	abbrev = 4
-	excludesfile = ~/.gitignore_global
+    pager = less -FRX
+    editor = emacs --no-desktop
+    abbrev = 4
+    excludesfile = ~/.gitignore_global
 [rerere]
-	enabled = true
+    enabled = true
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 [user]
-	name = Hao Lian
-	email = hi@haolian.org
+    name = Hao Lian
+    email = hi@haolian.org
 [include]
-	path = ~/.gitconfig.local
+    path = ~/.gitconfig.local
 
 [url "https://github.com/"]
   insteadOf = "g:"
