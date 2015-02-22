@@ -7,7 +7,7 @@
 	co = checkout
 	b = branch -vv
 	l = log --graph --pretty=format:'%w(100,0,10)%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -20
-	ll = !sh -c 'git l --all $@'
+	ll = !sh -c \"git l --all $@\"
 	d = diff
 	dd = diff --cached
 	s = status
@@ -17,6 +17,9 @@
     rz = !sh -c 'git reset --soft HEAD^ && git reset HEAD .'
     fixup = commit --fixup
     up = !sh -c 'git co -b tmp && git fetch -v origin master:master && git remote -v prune origin && git co - && git branch -d tmp'
+    rao = !sh -c \"git remote add origin $@\"
+    rso = !sh -c \"git remote set-url origin $@\"
+    rv = remote -v
 [core]
 	pager = less -FRX
 	editor = emacs --no-desktop
