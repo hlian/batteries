@@ -49,6 +49,7 @@ alias gr='git rebase'
 alias gi='git rebase -i'
 alias u='git submodule update'
 alias gt='cd ~/lab/ios'
+alias recask='pushd ~/.emacs.d && cask build && popd'
 
 export HISTSIZE=100000
 export SAVEHIST=100000
