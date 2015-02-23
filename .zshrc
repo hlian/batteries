@@ -28,7 +28,7 @@ compdef -d git
 
 # Aliases. ####################
 bindkey -e
-alias l='ls -Fh'
+alias l='ls -Fha'
 alias ll='l -l'
 alias -g  L='|& less'
 alias -g  D='>| /tmp/diff.diff'
