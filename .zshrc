@@ -1,7 +1,7 @@
 zsh ~/.zshrc-install
 
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="blinks"
+ZSH_THEME="hao"
 SOLARIZED_THEME="light"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"

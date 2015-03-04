@@ -1,3 +1,4 @@
+#!/bin/zsh
 # https://github.com/blinks zsh theme
 
 function _prompt_char() {
@@ -6,6 +7,11 @@ function _prompt_char() {
   else
     echo ' '
   fi
+}
+
+function _git_branch() {
+  ref=$(command git symbolic-ref HEAD 2> /dev/null) || ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
+  echo "${ref#refs/heads/}"
 }
 
 local ret_status="%(?::%{$fg_bold[red]%}✘ %s)"
@@ -29,4 +35,5 @@ PROMPT=$'\n''%{%f%k%b%}
 %{%K{${bkg}}%B%F{green}%}%n%{%B%F{blue}%}@%{%B%F{cyan}%}%m%{%B%F{green}%} ${ret_status}%{%b%F{yellow}%K{${bkg}}%}%~%{%B%F{green}%}$(git_prompt_info)%E%{%f%k%b%}
 %{%K{${bkg}}%}$(_prompt_char)%{%K{${bkg}}%} %#%{%f%k%b%} '
 
-RPROMPT='!%{%B%F{cyan}%}%!%{%f%k%b%}'
+RPROMPT='%B%F{blue}%(1j.%j jobs.)%{%f%k%b%}'
+bb="$(_git_branch)"
