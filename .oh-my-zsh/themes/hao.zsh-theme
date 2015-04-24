@@ -14,6 +14,13 @@ function _git_branch() {
   echo "${ref#refs/heads/}"
 }
 
+function _git_branch_hook() {
+  export bb="$(_git_branch)"
+}
+
+[[ -z $precmd_functions ]] && precmd_functions=()
+precmd_functions+=(_git_branch_hook)
+
 local ret_status="%(?::%{$fg_bold[red]%}✘ %s)"
 
 # This theme works with both the "dark" and "light" variants of the
@@ -36,4 +43,3 @@ PROMPT=$'\n''%{%f%k%b%}
 %{%K{${bkg}}%}$(_prompt_char)%{%K{${bkg}}%} %#%{%f%k%b%} '
 
 RPROMPT='%B%F{blue}%(1j.%j jobs.)%{%f%k%b%}'
-bb="$(_git_branch)"
