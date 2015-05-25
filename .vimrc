@@ -47,8 +47,9 @@ set list
 set history=1000
 set undolevels=1000
 
-syntax on
-filetype plugin indent on
+set backupdir=~/.vim/backup//
+set undodir=~/.vim/undo//
+set directory=~/.vim/swap//
 
 noremap ; :
 inoremap jj <ESC> " jj to go back to normal mode

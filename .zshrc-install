@@ -15,7 +15,7 @@ if [[ ! -d ~/.oh-my-zsh/plugins/zsh-syntax-highlighting ]]; then
 fi
 
 if [[ ! -f ~/.vim/autoload/pathogen.vim ]]; then
-   mkdir -p ~/.vim/autoload ~/.vim/bundle
+   mkdir -p ~/.vim/autoload ~/.vim/bundle ~/.vim/undo ~/.vim/swap ~/.vim/backup
    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 fi
 
@@ -34,7 +34,7 @@ if [[ ! -f $BREW_PATH ]]; then
 fi
 
 if [[ ! -f ~/.zshrc-cask-p ]]; then
-    apps=(dropbox google-chrome slack iterm2 vlc transmission dropbox skim transmission textwrangler caffeine spectacle spotify)
+    apps=(dropbox google-chrome slack iterm2 vlc dropbox skim transmission textwrangler caffeine spectacle spotify)
     brew install caskroom/cask/brew-cask
     brew tap caskroom/fonts
     brew install brew-cask
