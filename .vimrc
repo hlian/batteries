@@ -54,9 +54,15 @@ set directory=~/.vim/swap//
 noremap ; :
 inoremap jj <ESC> " jj to go back to normal mode
 
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
+nnoremap <M-j> :m .+1<CR>
+nnoremap <M-k> :m .-2<CR>
+inoremap <M-j> <Esc>:m .+1<CR>gi
+inoremap <M-k> <Esc>:m .-2<CR>gi
+vnoremap <M-j> :m '>+1<CR>gv
+vnoremap <M-k> :m '<-2<CR>gv
+
+for i in range(65,90) + range(97,122)
+  let c = nr2char(i)
+  exec "imap \e".c." <M-".c.">"
+  exec "map \e".c." <M-".c.">"
+endfor
