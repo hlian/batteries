@@ -19,6 +19,10 @@ if [[ ! -f ~/.vim/autoload/pathogen.vim ]]; then
    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 fi
 
+if [[ ! -d ~/.vim/bundle/vim-sensible ]]; then
+    git clone https://github.com/tpope/vim-sensible ~/.vim/bundle/vim-sensible
+fi
+
 if [[ ! -d ~/.vim/bundle/vim-airline ]]; then
     git clone https://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
 fi
