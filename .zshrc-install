@@ -27,6 +27,10 @@ if [[ ! -d ~/.vim/bundle/vim-airline ]]; then
     git clone https://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
 fi
 
+if [[ ! -d ~/.vim/bundle/vim-easymotion ]]; then
+    git clone https://github.com/Lokaltog/vim-easymotion ~/.vim/bundle/vim-easymotion
+fi
+
 if [[ ! -d ~/.fzf ]]; then
     git clone https://github.com/junegunn/fzf.git ~/.fzf
     ~/.fzf/install

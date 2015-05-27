@@ -66,3 +66,7 @@ for i in range(65,90) + range(97,122)
   exec "imap \e".c." <M-".c.">"
   exec "map \e".c." <M-".c.">"
 endfor
+
+autocmd FileType haskell setlocal shiftwidth=2
+
+color solarized
