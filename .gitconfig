@@ -1,13 +1,14 @@
 # -*- mode: conf -*-
 
 [push]
-    default = current
+    default = simple
 [alias]
     ci = commit --verbose
+    cip = commit --verbose -p
     co = checkout
     b = branch -vv
     l = log --graph --pretty=format:'%w(100,0,10)%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -20
-    ll = !sh -c \"git l --all $@\"
+    ll = !sh -c \"git l --all -10000 $@\"
     d = diff
     dd = diff --cached
     s = status
@@ -34,7 +35,12 @@
     email = hi@haolian.org
 [include]
     path = ~/.gitconfig.local
-
+[diff]
+    renames = copies
+	mnemonicPrefix = true
+    autosetupmerge = true
+[merge]
+    stat = true
 [url "https://github.com/"]
   insteadOf = "g:"
 [url "git@github.com:hlian"]

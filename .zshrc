@@ -49,12 +49,12 @@ alias gr='git rebase'
 alias gi='git rebase -i'
 alias u='git submodule update'
 alias gt='cd ~/lab/ios'
-alias ht='open Trellis.xcworkspace'
+alias ht='open *.xcworkspace'
 alias recask='pushd ~/.emacs.d && cask build && popd'
 alias pr='python /Users/me/lab/ios/bin/put-pr-on-board.py $PR hao $PASSWORD'
 
-export HISTSIZE=100000
-export SAVEHIST=100000
+export HISTSIZE=1000
+export SAVEHIST=1000
 
 export WORDCHARS=
 export CLICOLOR=1
