@@ -45,5 +45,3 @@
   insteadOf = "g:"
 [url "git@github.com:hlian"]
   insteadOf = "f:"
-[color]
-	ui = always
