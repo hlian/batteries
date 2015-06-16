@@ -1,3 +1,6 @@
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 zsh ~/.zshrc-install
 
 ZSH=$HOME/.oh-my-zsh
@@ -49,12 +52,22 @@ alias gr='git rebase'
 alias gi='git rebase -i'
 alias u='git submodule update'
 alias gt='cd ~/lab/ios'
-alias ht='open Trellis.xcworkspace'
+alias ht='open -a /Applications/Xcode.app *.xcworkspace'
+alias hht='open -a /Applications/Xcode-beta.app *.xcworkspace'
 alias recask='pushd ~/.emacs.d && cask build && popd'
 alias pr='python /Users/me/lab/ios/bin/put-pr-on-board.py $PR hao $PASSWORD'
+alias re='git rebase'
+alias ri='git rebase --interactive'
+alias cip='git commit --interactive -v'
+alias ci='git commit -v'
+alias b='git branch'
+alias co='git checkout'
+alias p='git push -u origin $bb'
+alias s='git status'
+alias add='git add'
 
-export HISTSIZE=100000
-export SAVEHIST=100000
+export HISTSIZE=1000
+export SAVEHIST=1000
 
 export WORDCHARS=
 export CLICOLOR=1
