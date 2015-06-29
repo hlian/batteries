@@ -58,13 +58,15 @@ alias recask='pushd ~/.emacs.d && cask build && popd'
 alias pr='python /Users/me/lab/ios/bin/put-pr-on-board.py $PR hao $PASSWORD'
 alias re='git rebase'
 alias ri='git rebase --interactive'
-alias cip='git commit --interactive -v'
+alias am='git commit --amend -p -v'
+alias cip='git commit -p -v'
 alias ci='git commit -v'
 alias b='git branch'
 alias co='git checkout'
 alias p='git push -u origin $bb'
 alias s='git status'
 alias add='git add'
+alias lg="git log --graph --abbrev-commit --all --pretty=format:'%w(100,0,10)%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 
 export HISTSIZE=1000
 export SAVEHIST=1000
