@@ -1,0 +1,8 @@
+.DS_Store
+*~
+*#
+.#*
+*.projectile
+*.swp
+.sw*
+.stack-work/
