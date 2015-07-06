@@ -21,6 +21,8 @@
     rao = !sh -c \"git remote add origin $@\"
     rso = !sh -c \"git remote set-url origin $@\"
     rv = remote -v
+    bm = branch -vv --merged
+    brm = branch -rvv --merged
 [core]
     pager = less -FRX
     editor = emacs --no-desktop
