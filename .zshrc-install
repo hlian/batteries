@@ -2,9 +2,11 @@
 
 set -e
 
-if [[ ! -d ~/.oh-my-zsh ]]; then
-    pushd ~
-    git clone https://github.com/robbyrussell/oh-my-zsh .oh-my-zsh
+if [[ ! -d ~/.oh-my-zsh/.git ]]; then
+    pushd ~/.oh-my-zsh
+    git init
+    git remote add origin https://github.com/robbyrussell/oh-my-zsh
+    git pull origin master
     popd
 fi
 
