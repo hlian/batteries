@@ -36,8 +36,8 @@ alias ll='l -l'
 alias -g  L='|& less'
 alias -g  D='>| /tmp/diff.diff'
 alias -g  bb='$(git branch | fzf +s +m)'
-alias -g  brb='$(git branch -r | sed "s/origin\///" | fzf +s +m)'
-alias -g  .log='$(git log --reverse --pretty=oneline --abbrev-commit -10 | fzf +s --prompt="fixup> " | awk ''{ print $1 }'')'
+alias -g  brb='$(git branch -r | sed "s/origin\///" | grep -v don/ | grep -v lou/ | grep -v hp/ | fzf +s +m)'
+alias -g  .log='$(git log --reverse --pretty=oneline --abbrev-commit -20 | fzf +s --prompt="fixup> " | awk ''{ print $1 }'')'
 alias telnet='rlwrap telnet'
 alias reload='. ~/.zshrc'
 alias v='vim'
@@ -47,17 +47,13 @@ alias ghci-core="ghci -ddump-simpl -dsuppress-idinfo -dsuppress-coercions -dsupp
 alias dgit='git --git-dir ~/dotfiles/.git'
 alias egit='git --git-dir ~/.emacs.d/.git'
 alias g='git commit -vp'
-alias gc='git cherry-pick'
 alias gr='git rebase'
-alias gi='git rebase -i'
-alias u='git submodule update'
+alias grc='git rebase --cont'
 alias gt='cd ~/lab/ios'
 alias ht='open -a /Applications/Xcode.app *.xcworkspace'
 alias hht='open -a /Applications/Xcode-beta.app *.xcworkspace'
 alias recask='pushd ~/.emacs.d && cask build && popd'
 alias pr='python /Users/me/lab/ios/bin/put-pr-on-board.py $PR hao $PASSWORD'
-alias re='git rebase'
-alias ri='git rebase --interactive'
 alias am='git commit --amend -p -v'
 alias cip='git commit -p -v'
 alias ci='git commit -v'
@@ -66,14 +62,20 @@ alias co='git checkout'
 alias p='git push -u origin $bb'
 alias s='git status'
 alias add='git add'
-alias lg="git log --graph --abbrev-commit --all --pretty=format:'%w(100,0,10)%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+alias lga="git log --graph --abbrev-commit --all --pretty=format:'%w(100,0,10)%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+alias gd="git diff"
+alias gz="git reset"
+alias gf="git fixup"
+
+function lg {
+    git log --graph --pretty=format:'%w(100,0,10)%h -%d %s (%cr) <%an>' --abbrev-commit -100 $@ >| /tmp/ok
+}
 
 export HISTSIZE=1000
 export SAVEHIST=1000
 
 export WORDCHARS=
 export CLICOLOR=1
-export CLICOLOR_FORCE=1
 export LESS=-Ri
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
@@ -90,9 +92,10 @@ if [[ -d $HOME/.cabal/bin ]]; then
 fi
 
 if [[ $TERM_PROGRAM =~ iTerm.app ]]; then
-    alias emacs='~/Applications/Emacs.app/Contents/MacOS/Emacs -nw --no-desktop'
     export EDITOR='~/Applications/Emacs.app/Contents/MacOS/Emacs -nw --no-desktop'
-    alias e='open -a Emacs'
+    export FPP_EDITOR='open -a Emacs'
+    alias emacs=$EDITOR
+    alias e=$FPP_EDITOR
 else
     export EDITOR='emacs --no-desktop'
     alias e='emacs --no-desktop'
