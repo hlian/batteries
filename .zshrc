@@ -73,7 +73,6 @@ export SAVEHIST=1000
 
 export WORDCHARS=
 export CLICOLOR=1
-export CLICOLOR_FORCE=1
 export LESS=-Ri
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
