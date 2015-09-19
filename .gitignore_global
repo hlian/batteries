@@ -6,3 +6,4 @@
 *.swp
 .sw*
 .stack-work/
+bower_components/
