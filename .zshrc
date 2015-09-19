@@ -66,6 +66,7 @@ alias lga="git log --graph --abbrev-commit --all --pretty=format:'%w(100,0,10)%C
 alias gd="git diff"
 alias gz="git reset"
 alias gf="git fixup"
+alias xargsi="xargs -I {}"
 
 function lg {
     git log --graph --pretty=format:'%w(100,0,10)%h -%d %s (%cr) <%an>' --abbrev-commit -100 $@ >| /tmp/ok
