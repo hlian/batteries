@@ -85,6 +85,10 @@ if [[ -d /usr/local/sbin ]]; then
     export PATH=/usr/local/sbin:$PATH
 fi
 
+if [[ -d ~/.local/bin ]]; then
+    export PATH=~/.local/bin:$PATH
+fi
+
 if [[ $TERM_PROGRAM =~ iTerm.app ]]; then
     export EDITOR='~/Applications/Emacs.app/Contents/MacOS/Emacs -nw --no-desktop'
     export FPP_EDITOR='open -a Emacs'
