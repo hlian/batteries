@@ -41,9 +41,6 @@ alias -g  .log='$(git log --reverse --pretty=oneline --abbrev-commit -20 | fzf +
 alias telnet='rlwrap telnet'
 alias reload='. ~/.zshrc'
 alias v='vim'
-alias ci='cabal install --disable-documentation --disable-coverage --disable-benchmarks --disable-library-profiling -j'
-# http://dev.stephendiehl.com/hask/#data-formats
-alias ghci-core="ghci -ddump-simpl -dsuppress-idinfo -dsuppress-coercions -dsuppress-type-applications -dsuppress-uniques -dsuppress-module-prefixes"
 alias dgit='git --git-dir ~/dotfiles/.git'
 alias egit='git --git-dir ~/.emacs.d/.git'
 alias g='git commit -vp'
@@ -53,7 +50,6 @@ alias gt='cd ~/lab/ios'
 alias ht='open -a /Applications/Xcode.app *.xcworkspace'
 alias hht='open -a /Applications/Xcode-beta.app *.xcworkspace'
 alias recask='pushd ~/.emacs.d && cask build && popd'
-alias pr='python /Users/me/lab/ios/bin/put-pr-on-board.py $PR hao $PASSWORD'
 alias am='git commit --amend -p -v'
 alias cip='git commit -p -v'
 alias ci='git commit -v'
@@ -88,10 +84,6 @@ if [[ -d /usr/local/sbin ]]; then
     export PATH=/usr/local/sbin:$PATH
 fi
 
-if [[ -d $HOME/.cabal/bin ]]; then
-    export PATH=$HOME/.cabal/bin:$PATH
-fi
-
 if [[ $TERM_PROGRAM =~ iTerm.app ]]; then
     export EDITOR='~/Applications/Emacs.app/Contents/MacOS/Emacs -nw --no-desktop'
     export FPP_EDITOR='open -a Emacs'
@@ -110,15 +102,10 @@ if [[ -d ~/.cask/bin ]]; then
     export PATH="$HOME/.cask/bin:$PATH"
 fi
 
-if [[ -d ~/.cabal/bin ]]; then
-    export PATH="$HOME/.cabal/bin:$PATH"
-fi
-
 if [[ ! -f ~/.zshrc-here ]]; then
     touch ~/.zshrc-here
 fi
 
 source ~/.fzf.zsh
 source ~/.zshrc-here
-# http://serverfault.com/questions/192499/prune-duplicate-entries-from-path-variable
 typeset -U PATH
