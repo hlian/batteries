@@ -63,6 +63,7 @@ alias gd="git diff"
 alias gz="git reset"
 alias gf="git fixup"
 alias xargsi="xargs -I {}"
+alias brewup="brew update; brew upgrade; brew cleanup"
 
 function lg {
     git log --graph --pretty=format:'%w(100,0,10)%h -%d %s (%cr) <%an>' --abbrev-commit -100 $@ >| /tmp/ok
