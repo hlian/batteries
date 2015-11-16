@@ -29,6 +29,8 @@
     editor = emacs --no-desktop
     abbrev = 4
     excludesfile = ~/.gitignore_global
+[rebase]
+    autostash = true
 [rerere]
     enabled = true
 [credential]
