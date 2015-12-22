@@ -26,7 +26,7 @@
     brm = branch -rvv --merged
 [core]
     pager = less -FRX
-    editor = emacs --no-desktop
+    editor = ~/Applications/Emacs.app/Contents/MacOS/Emacs -nw --no-desktop
     abbrev = 4
     excludesfile = ~/.gitignore_global
 [rebase]
