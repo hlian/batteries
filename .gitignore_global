@@ -7,3 +7,4 @@
 .sw*
 .stack-work/
 bower_components/
+.elasticbeanstalk/

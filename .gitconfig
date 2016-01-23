@@ -31,6 +31,7 @@
     excludesfile = ~/.gitignore_global
 [rebase]
     autostash = true
+    autosquash = true
 [rerere]
     enabled = true
 [credential]
