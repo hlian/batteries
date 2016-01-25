@@ -11,6 +11,7 @@ bookmarks =
 rebase =
 purge =
 color =
+mercurial_keyring =
 
 [diff]
 git = True
