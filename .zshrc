@@ -25,6 +25,7 @@ setopt noflowcontrol
 setopt nomatch
 setopt sharehistory
 setopt rcquotes
+setopt ignoreeof
 unsetopt case_glob
 unsetopt nomatch
 compdef -d git
