@@ -66,6 +66,8 @@ alias gf="git fixup"
 alias xargsi="xargs -I {}"
 alias brewup="brew update; brew upgrade; brew cleanup"
 alias sb="stack build --fast"
+alias sbp="stack build --fast --profile"
+alias sbh="stack build --fast --haddock"
 alias st="stack test --fast"
 
 function lg {

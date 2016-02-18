@@ -44,7 +44,7 @@ if [[ ! -f $BREW_PATH ]]; then
 fi
 
 if [[ ! -f ~/.zshrc-cask-p ]]; then
-    apps=(dropbox google-chrome slack iterm2 vlc skim transmission textwrangler caffeine spectacle spotify)
+    apps=(dropbox google-chrome slack iterm2 vlc skim transmission textwrangler caffeine spectacle spotify adium hipchat dash quicksilver emacs karabiner)
     brew install caskroom/cask/brew-cask
     brew tap caskroom/fonts
     brew install brew-cask
