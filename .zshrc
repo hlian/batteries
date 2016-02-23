@@ -2,6 +2,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 zsh ~/.zshrc-install
+zsh ~/.zshrc-prelude
 
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="hao"
@@ -34,12 +35,10 @@ compdef -d git
 bindkey -e
 alias l='ls -Fha'
 alias ll='l -l'
-alias -g  L='|& less'
-alias -g  D='>| /tmp/diff.diff'
-alias -g  bb='$(git branch | fzf +s +m)'
-alias -g  brb='$(git branch -r | sed "s/origin\///" | grep -v don/ | grep -v lou/ | grep -v hp/ | fzf +s +m)'
-alias -g  .log='$(git log --reverse --pretty=oneline --abbrev-commit -20 | fzf +s --prompt="fixup> " | awk ''{ print $1 }'')'
-alias telnet='rlwrap telnet'
+alias -g .l='|& less'
+alias -g .b='$(git branch | fzf +s +m)'
+alias -g .rb='$(git branch -r | sed "s/origin\///" | grep -v don/ | grep -v lou/ | grep -v hp/ | fzf +s +m)'
+alias -g .log='$(git log --reverse --pretty=oneline --abbrev-commit -20 | fzf +s --prompt="fixup> " | awk ''{ print $1 }'')'
 alias reload='. ~/.zshrc'
 alias v='vim'
 alias dgit='git --git-dir ~/dotfiles/.git'
@@ -47,9 +46,6 @@ alias egit='git --git-dir ~/.emacs.d/.git'
 alias g='git commit -vp'
 alias gr='git rebase'
 alias grc='git rebase --cont'
-alias gt='cd ~/lab/ios'
-alias ht='open -a /Applications/Xcode.app *.xcworkspace'
-alias hht='open -a /Applications/Xcode-beta.app *.xcworkspace'
 alias recask='pushd ~/.emacs.d && cask build && popd'
 alias am='git commit --amend -p -v'
 alias cip='git commit -p -v'
@@ -69,10 +65,6 @@ alias sb="stack build --fast"
 alias sbp="stack build --fast --profile"
 alias sbh="stack build --fast --haddock"
 alias st="stack test --fast"
-
-function lg {
-    git log --graph --pretty=format:'%w(100,0,10)%h -%d %s (%cr) <%an>' --abbrev-commit -100 $@ >| /tmp/ok
-}
 
 export HISTSIZE=1000
 export SAVEHIST=1000
@@ -102,10 +94,6 @@ if [[ $TERM_PROGRAM =~ iTerm.app ]]; then
 else
     export EDITOR='emacs --no-desktop'
     alias e='emacs --no-desktop'
-fi
-
-if which ruby >/dev/null && which gem >/dev/null; then
-    export PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
 
 if [[ -d ~/.cask/bin ]]; then
