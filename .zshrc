@@ -104,3 +104,4 @@ source ~/.fzf.zsh
 source ~/.zshrc-here
 typeset -U PATH
 export FZF_TMUX=0
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
