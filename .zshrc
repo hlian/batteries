@@ -2,7 +2,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 zsh ~/.zshrc-install
-zsh ~/.zshrc-prelude
+. ~/.zshrc-prelude
 
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="hao"
@@ -61,10 +61,6 @@ alias gz="git reset"
 alias gf="git fixup"
 alias xargsi="xargs -I {}"
 alias brewup="brew update; brew upgrade; brew cleanup"
-alias sb="stack build --fast"
-alias sbp="stack build --fast --profile"
-alias sbh="stack build --fast --haddock"
-alias st="stack test --fast"
 
 export HISTSIZE=1000
 export SAVEHIST=1000
@@ -107,3 +103,4 @@ fi
 source ~/.fzf.zsh
 source ~/.zshrc-here
 typeset -U PATH
+export FZF_TMUX=0

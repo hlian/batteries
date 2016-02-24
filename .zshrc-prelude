@@ -13,3 +13,7 @@ function clone_emacsd {
 
 function install_stack {
 }
+
+function st {
+    stack $@ --fast --trace --test
+}
