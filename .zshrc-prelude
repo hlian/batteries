@@ -15,5 +15,5 @@ function install_stack {
 }
 
 function st {
-    stack $@ --fast --trace --test
+    stack $@ --fast --profile --test
 }
