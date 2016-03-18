@@ -15,5 +15,5 @@ function install_stack {
 }
 
 function st {
-    stack $@ --fast --profile --test
+    stack $@ --fast --library-profiling
 }

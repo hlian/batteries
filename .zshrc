@@ -31,14 +31,19 @@ unsetopt case_glob
 unsetopt nomatch
 compdef -d git
 
+# Global aliases. ####################
+alias -g .l='|& less'
+alias -g .b='$(git branch | fzf +s +m)'
+alias -g .rb='$(git branch -r | sed "s/origin\///" | grep -v don/ | grep -v lou/ | grep -v hp/ | fzf +s +m)'
+alias -g .log='$(git log --pretty=oneline --abbrev-commit -20 | fzf +s --prompt="fixup> " | awk ''{ print $1 }'')'
+alias -g .json='-H "Content-type: application/json"'
+alias -g .nb='--no-build'
+alias -g .w='--ghc-options="-Wall -Werror"'
+
 # Aliases. ####################
 bindkey -e
 alias l='ls -Fha'
 alias ll='l -l'
-alias -g .l='|& less'
-alias -g .b='$(git branch | fzf +s +m)'
-alias -g .rb='$(git branch -r | sed "s/origin\///" | grep -v don/ | grep -v lou/ | grep -v hp/ | fzf +s +m)'
-alias -g .log='$(git log --reverse --pretty=oneline --abbrev-commit -20 | fzf +s --prompt="fixup> " | awk ''{ print $1 }'')'
 alias reload='. ~/.zshrc'
 alias v='vim'
 alias dgit='git --git-dir ~/dotfiles/.git'
@@ -82,7 +87,7 @@ if [[ -d ~/.local/bin ]]; then
     export PATH=~/.local/bin:$PATH
 fi
 
-if [[ $TERM_PROGRAM =~ iTerm.app ]]; then
+if [[ $TERM_PROGRAM =~ iTerm.app || $TERM =~ screen-256color ]]; then
     export EDITOR='~/Applications/Emacs.app/Contents/MacOS/Emacs -nw --no-desktop'
     export FPP_EDITOR='open -a Emacs'
     alias emacs=$EDITOR
