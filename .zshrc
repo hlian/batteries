@@ -75,6 +75,9 @@ export CLICOLOR=1
 export LESS=-Ri
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
+# https://github.com/sfackler/rust-openssl/issues/255
+export OPENSSL_INCLUDE_DIR=/usr/local/opt/openssl/include
+
 if [[ -d /usr/local/bin ]]; then
     export PATH=/usr/local/bin:$PATH
 fi
