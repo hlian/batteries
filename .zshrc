@@ -90,6 +90,10 @@ if [[ -d ~/.local/bin ]]; then
     export PATH=~/.local/bin:$PATH
 fi
 
+if [[ -d ~/.stack/programs/x86_64-osx/ghc-7.10.3/bin ]]; then
+    export PATH=~/.stack/programs/x86_64-osx/ghc-7.10.3/bin:$PATH
+fi
+
 if [[ $TERM_PROGRAM =~ iTerm.app || $TERM =~ screen-256color ]]; then
     export EDITOR='~/Applications/Emacs.app/Contents/MacOS/Emacs -nw --no-desktop'
     export FPP_EDITOR='open -a Emacs'
