@@ -15,13 +15,17 @@ function install_stack {
 }
 
 function stb {
-    stack build --fast --test --ghc-options="-Wall -Werror -j +RTS -A512m -n2m -RTS" $@
+    stack build $@ --fast --test --ghc-options="-Wall -Werror -j +RTS -A512m -n2m -RTS"
 }
 
 function stbb {
-    stack build --fast --test --ghc-options="-Wall -j +RTS -A512m -n2m -RTS" $@
+    stack build $@ --fast --test --ghc-options="-Wall -j +RTS -A512m -n2m -RTS"
+}
+
+function stin {
+    stack install $@ --fast --test --ghc-options="-Wall -j +RTS -A512m -n2m -RTS"
 }
 
 function stg {
-    stack ghci --no-build --ghc-options="-Wall -j +RTS -A512m -n2m -RTS" $@
+    stack ghci $@ --no-build --ghc-options="-Wall -j +RTS -A512m -n2m -RTS"
 }
