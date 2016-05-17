@@ -75,25 +75,6 @@ export CLICOLOR=1
 export LESS=-Ri
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
-# https://github.com/sfackler/rust-openssl/issues/255
-export OPENSSL_INCLUDE_DIR=/usr/local/opt/openssl/include
-
-if [[ -d /usr/local/bin ]]; then
-    export PATH=/usr/local/bin:$PATH
-fi
-
-if [[ -d /usr/local/sbin ]]; then
-    export PATH=/usr/local/sbin:$PATH
-fi
-
-if [[ -d ~/.local/bin ]]; then
-    export PATH=~/.local/bin:$PATH
-fi
-
-if [[ -d ~/.stack/programs/x86_64-osx/ghc-7.10.3/bin ]]; then
-    export PATH=~/.stack/programs/x86_64-osx/ghc-7.10.3/bin:$PATH
-fi
-
 if [[ $TERM_PROGRAM =~ iTerm.app || $TERM =~ screen-256color ]]; then
     export EDITOR='~/Applications/Emacs.app/Contents/MacOS/Emacs -nw --no-desktop'
     export FPP_EDITOR='open -a Emacs'
@@ -104,16 +85,11 @@ else
     alias e='emacs --no-desktop'
 fi
 
-if [[ -d ~/.cask/bin ]]; then
-    export PATH="$HOME/.cask/bin:$PATH"
-fi
-
 if [[ ! -f ~/.zshrc-here ]]; then
     touch ~/.zshrc-here
 fi
 
 source ~/.fzf.zsh
 source ~/.zshrc-here
-typeset -U PATH
 export FZF_TMUX=0
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh

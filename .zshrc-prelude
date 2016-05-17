@@ -26,6 +26,10 @@ function stin {
     stack install $@ --fast --test --ghc-options="-Wall -j +RTS -A512m -n2m -RTS"
 }
 
+function stbo {
+    stack build --test --ghc-options="-O2 -funbox-strict-fields -Wall -j +RTS -A512m -n2m -RTS" $@
+}
+
 function stg {
     stack ghci $@ --no-build --ghc-options="-Wall -j +RTS -A512m -n2m -RTS"
 }
