@@ -1,6 +1,5 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
 zsh ~/.zshrc-install
 . ~/.zshrc-prelude
 
@@ -38,7 +37,9 @@ alias -g .rb='$(git branch -r | sed "s/origin\///" | grep -v don/ | grep -v lou/
 alias -g .log='$(git log --pretty=oneline --abbrev-commit -20 | fzf +s --prompt="fixup> " | awk ''{ print $1 }'')'
 alias -g .json='-H "Content-type: application/json"'
 alias -g .nb='--no-build'
+alias -g .ne='--no-edit'
 alias -g .w='--ghc-options="-Wall -Werror"'
+alias -g .fw='--file-watch'
 
 # Aliases. ####################
 bindkey -e
