@@ -33,3 +33,6 @@ function stbo {
 function stg {
     stack ghci $@ --no-build --ghc-options="-Wall -j +RTS -A512m -n2m -RTS"
 }
+
+
+alias -g .gc='--fast --ghc-options="-Wall -j +RTS -A1024m -n2m -RTS" $@'

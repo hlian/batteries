@@ -31,7 +31,7 @@ unsetopt nomatch
 compdef -d git
 
 # Global aliases. ####################
-alias -g .l='|& less'
+alias -g .l='|& less -FRX'
 alias -g .b='$(git branch | fzf +s +m)'
 alias -g .rb='$(git branch -r | sed "s/origin\///" | grep -v don/ | grep -v lou/ | grep -v hp/ | fzf +s +m)'
 alias -g .log='$(git log --pretty=oneline --abbrev-commit -20 | fzf +s --prompt="fixup> " | awk ''{ print $1 }'')'
