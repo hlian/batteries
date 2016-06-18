@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+export SSH_AGENT_PID=$(pgrep -U $USER ssh-agent)
+if [[ -n "$SSH_AGENT_PID" ]]; then
+    export SSH_AUTH_SOCK=$(lsof -U -a -p "$SSH_AGENT_PID" -F n | grep '^n/' | cut -c2-)
+else
+    echo "no ssh-agent found"
+fi

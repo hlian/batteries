@@ -91,6 +91,7 @@ if [[ ! -f ~/.zshrc-here ]]; then
 fi
 
 source ~/.fzf.zsh
+source ~/.zshrc-ssh-agent
 source ~/.zshrc-here
 export FZF_TMUX=0
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh

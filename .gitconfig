@@ -24,7 +24,7 @@
     bm = branch -vv --merged
     brm = branch -rvv --merged
 [core]
-    pager = less -FRX
+	pager = less --tabs=4 -RFX
 	editor = emacs
     abbrev = 4
     excludesfile = ~/.gitignore_global

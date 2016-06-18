@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 function lg {
     git log --graph --pretty=format:'%w(100,0,10)%h -%d %s (%cr) <%an>' --abbrev-commit -100 $@ >| /tmp/ok
 }
@@ -33,6 +35,5 @@ function stbo {
 function stg {
     stack ghci $@ --no-build --ghc-options="-Wall -j +RTS -A512m -n2m -RTS"
 }
-
 
 alias -g .gc='--fast --ghc-options="-Wall -j +RTS -A1024m -n2m -RTS" $@'
