@@ -1,0 +1,6 @@
+:set prompt "\ESC[34mλ> \ESC[m"
+:set -XOverloadedStrings
+:set -XFlexibleInstances
+:set -XFlexibleContexts
+:set -XMultiParamTypeClasses
+:set -fno-warn-type-defaults
