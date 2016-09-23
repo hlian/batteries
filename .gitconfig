@@ -46,5 +46,5 @@
     stat = true
 [url "https://github.com/"]
   insteadOf = "g:"
-[url "git@github.com:hlian"]
+[url "git@github.com:hlian/"]
   insteadOf = "f:"
