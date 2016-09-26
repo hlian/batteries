@@ -2,6 +2,9 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'https://github.com/myfreeweb/intero.nvim.git'
 Plug 'https://github.com/tpope/vim-sensible.git'
 Plug 'https://github.com/vim-airline/vim-airline.git'
+Plug 'https://github.com/bitc/vim-hdevtools.git'
+Plug 'https://github.com/neomake/neomake.git'
+Plug 'https://github.com/raichoo/haskell-vim.git'
 call plug#end()
 
 " http://nvie.com/posts/how-i-boosted-my-vim/
@@ -12,8 +15,6 @@ set nowrap
 set number " of the line variety
 set showmatch " parentheses
 set title " change terminal's title
-set visualbell
-set noerrorbells
 set ch=2 " command-line height
 set laststatus=2 " always show status bar
 set wrapscan " wrap search
@@ -41,7 +42,6 @@ set copyindent " new lines copy previous lines' indent
 set shiftround " < and >
 set smarttab
 set expandtab
-set encoding=utf-8
 set relativenumber " relative line number numbering for fast moves
 set backspace=indent,eol,start
 set listchars=tab:>-,trail:~,extends:>,precedes:<
@@ -71,3 +71,6 @@ for i in range(65,90) + range(97,122)
 endfor
 
 autocmd FileType haskell setlocal shiftwidth=2
+
+set vb t_vb=
+autocmd GUIEnter * set vb t_vb=
