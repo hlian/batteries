@@ -69,8 +69,6 @@ endfor
 
 autocmd FileType haskell setlocal shiftwidth=2
 
-color solarized
-
 if executable("ag")
     set grepprg=ag\ --nogroup\ --nocolor\ --ignore-case\ --column
     set grepformat=%f:%l:%c:%m,%f:%l:%m

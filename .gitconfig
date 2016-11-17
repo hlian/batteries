@@ -17,8 +17,8 @@
     rc = rebase --cont
     rz = !sh -c 'git reset --soft HEAD^ && git reset HEAD .'
     fixup = commit --fixup
-    up = !sh -c 'git co -B tmp && git fetch -v origin master:master && git remote -v prune origin && git co - && git branch -d tmp'
-        rao = !sh -c \"git remote add origin $@\"
+    up = !sh -c 'git co -B tmp && git fetch --all && git fetch -v origin master:master && git remote -v prune origin && git co - && git branch -d tmp'
+    rao = !sh -c \"git remote add origin $@\"
     rso = !sh -c \"git remote set-url origin $@\"
     rv = remote -v
     bm = branch -vv --merged
@@ -44,6 +44,6 @@
 [merge]
     stat = true
 [url "https://github.com/"]
-  insteadOf = "g:"
+    insteadOf = "g:"
 [url "git@github.com:hlian/"]
-  insteadOf = "f:"
+    insteadOf = "f:"
