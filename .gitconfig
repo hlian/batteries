@@ -43,7 +43,7 @@
     autosetupmerge = true
 [merge]
     stat = true
-[url "https://github.com/"]
-    insteadOf = "g:"
-[url "git@github.com:hlian/"]
-    insteadOf = "f:"
+[url "git@github.com:"]
+  insteadOf = "g:"
+[url "git@github.com:hlian"]
+  insteadOf = "f:"
