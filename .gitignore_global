@@ -10,3 +10,4 @@
 .stack-work/
 .sw*
 bower_components/
+flycheck_*.hs
