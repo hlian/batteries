@@ -11,3 +11,5 @@
 .sw*
 bower_components/
 flycheck_*.hs
+.ensime
+.ensime_cache/
