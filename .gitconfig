@@ -18,6 +18,7 @@
     rz = !sh -c 'git reset --soft HEAD^ && git reset HEAD .'
     fixup = commit --fixup
     up = !sh -c 'git co -B tmp && git fetch --all && git fetch -v origin master:master && git remote -v prune origin && git co - && git branch -d tmp'
+    upd = !sh -c 'git co -B tmp && git fetch --all && git fetch -v origin develop:develop && git remote -v prune origin && git co - && git branch -d tmp'
     rao = !sh -c \"git remote add origin $@\"
     rso = !sh -c \"git remote set-url origin $@\"
     rv = remote -v
