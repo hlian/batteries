@@ -3,8 +3,8 @@
 [push]
     default = simple
 [alias]
-    ci = commit --verbose
-    cip = commit --verbose -p
+    l = log --graph --pretty=format:'%w(100,0,10)%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -20
+    ll = !sh -c \"git l --all -10000 $@\"
     a = commit --amend -p --verbose
     co = checkout
     b = branch -vv
@@ -12,13 +12,10 @@
     ll = !sh -c \"git l --all -10000 $@\"
     d = diff
     dd = diff --cached
-    s = status
     ri = rebase -i --autosquash
     rc = rebase --cont
     rz = !sh -c 'git reset --soft HEAD^ && git reset HEAD .'
     fixup = commit --fixup
-    up = !sh -c 'git co -B tmp && git fetch --all && git fetch -v origin master:master && git remote -v prune origin && git co - && git branch -d tmp'
-    upd = !sh -c 'git co -B tmp && git fetch --all && git fetch -v origin develop:develop && git remote -v prune origin && git co - && git branch -d tmp'
     rao = !sh -c \"git remote add origin $@\"
     rso = !sh -c \"git remote set-url origin $@\"
     rv = remote -v
@@ -44,6 +41,8 @@
     autosetupmerge = true
 [merge]
     stat = true
+[status]
+  submoduleSummary = true
 [url "git@github.com:"]
   insteadOf = "g:"
 [url "git@github.com:hlian"]

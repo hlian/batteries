@@ -6,10 +6,17 @@
 .#*
 .DS_Store
 .ackrc
-.elasticbeanstalk/
-.stack-work/
 .sw*
-bower_components/
 flycheck_*.hs
 .ensime
+.dir-locals.*
+
+.elasticbeanstalk/
+.stack-work/
+bower_components/
 .ensime_cache/
+
+
+# fucking axiom
+/axiom-web/.gitignore
+/axiom-test/.gitignore
