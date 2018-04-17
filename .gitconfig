@@ -1,49 +1,32 @@
 # -*- mode: conf -*-
 
 [push]
-    default = simple
-[alias]
-    l = log --graph --pretty=format:'%w(100,0,10)%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -20
-    ll = !sh -c \"git l --all -10000 $@\"
-    a = commit --amend -p --verbose
-    co = checkout
-    b = branch -vv
-    l = log --graph --pretty=format:'%w(100,0,10)%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -20
-    ll = !sh -c \"git l --all -10000 $@\"
-    d = diff
-    dd = diff --cached
-    ri = rebase -i --autosquash
-    rc = rebase --cont
-    rz = !sh -c 'git reset --soft HEAD^ && git reset HEAD .'
-    fixup = commit --fixup
-    rao = !sh -c \"git remote add origin $@\"
-    rso = !sh -c \"git remote set-url origin $@\"
-    rv = remote -v
-    bm = branch -vv --merged
-    brm = branch -rvv --merged
+	default = simple
 [core]
-	pager = less --tabs=4 -RFX -x1,5
-    abbrev = 4
-    excludesfile = ~/.gitignore_global
+	pager = less --tabs=2 -RFX -x1,5
+	abbrev = 4
+	excludesfile = ~/.gitignore_global
 [rebase]
-    autostash = true
-    autosquash = true
+	autostash = true
+	autosquash = true
 [rerere]
-    enabled = true
+	enabled = true
 [user]
-    name = Hao Lian
-    email = hi@haolian.org
+	name = Hao Lian
+	email = hi@haolian.org
 [include]
-    path = ~/.gitconfig.local
+	path = ~/.gitconfig.local
 [diff]
-    renames = copies
+	renames = copies
 	mnemonicPrefix = true
-    autosetupmerge = true
+	autosetupmerge = true
+	wsErrorHighlight = old,new,context
 [merge]
-    stat = true
+	stat = true
+	conflictstyle = diff3
 [status]
-  submoduleSummary = true
+	submoduleSummary = true
 [url "git@github.com:"]
-  insteadOf = "g:"
+	insteadOf = "g:"
 [url "git@github.com:hlian"]
-  insteadOf = "f:"
+	insteadOf = "f:"
