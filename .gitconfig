@@ -30,3 +30,14 @@
 	insteadOf = "g:"
 [url "git@github.com:hlian"]
 	insteadOf = "f:"
+[alias]
+	b = branch
+	ci = commit -v
+	cip = commit -pv
+	co = checkout
+	r = remote
+	p = pull
+	u = push
+	d = diff
+	dd = diff --cached
+	l = log
