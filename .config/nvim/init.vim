@@ -74,3 +74,5 @@ autocmd FileType haskell setlocal shiftwidth=2
 
 set vb t_vb=
 autocmd GUIEnter * set vb t_vb=
+
+set inccommand=nosplit

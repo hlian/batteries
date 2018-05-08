@@ -21,6 +21,7 @@
 	mnemonicPrefix = true
 	autosetupmerge = true
 	wsErrorHighlight = old,new,context
+	algorithm = histogram
 [merge]
 	stat = true
 	conflictstyle = diff3
