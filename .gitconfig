@@ -22,6 +22,7 @@
 	autosetupmerge = true
 	wsErrorHighlight = old,new,context
 	algorithm = histogram
+	colormoved = default
 [merge]
 	stat = true
 	conflictstyle = diff3
@@ -46,3 +47,4 @@
     r = rebase
     ri = rebase --interactive
     rc = rebase --cont
+    sigh = remote
