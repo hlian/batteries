@@ -43,8 +43,8 @@
 	d = diff
 	dd = diff --cached
 	l = log
-    s = status
-    r = rebase
-    ri = rebase --interactive
-    rc = rebase --cont
-    sigh = remote
+	s = status
+	r = rebase
+	ri = rebase --interactive
+	rc = rebase --cont
+	sigh = remote
