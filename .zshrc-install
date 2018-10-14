@@ -30,10 +30,8 @@ if [[ ! -f $BREW_PATH ]]; then
 fi
 
 if [[ ! -f ~/.zshrc-cask-p ]]; then
-    apps=(dropbox google-chrome slack iterm2 vlc skim transmission textwrangler caffeine spectacle spotify adium hipchat dash quicksilver emacs karabiner)
-    brew install caskroom/cask/brew-cask
-    brew tap caskroom/fonts
+    apps=(dropbox google-chrome firefox slack iterm2 vlc caffeine spectacle spotify dash quicksilver emacs authy dashlane)
     brew cask install --appdir="/Applications" ${apps[@]}
-    brew cask install font-ubuntu
+    brew install fzf yarn node openssh font-fira-code hub
     touch ~/.zshrc-cask-p
 fi
