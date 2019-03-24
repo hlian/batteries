@@ -1,4 +1,4 @@
-*#
+
 *.prof
 *.projectile
 *.swp
@@ -16,7 +16,4 @@ flycheck_*.hs
 bower_components/
 .ensime_cache/
 
-
-# fucking axiom
-/axiom-web/.gitignore
-/axiom-test/.gitignore
+.hao

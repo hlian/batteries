@@ -52,7 +52,8 @@ set undodir=~/.vim/undo//
 set directory=~/.vim/swap//
 
 noremap ; :
-inoremap jj <ESC> " jj to go back to normal mode
+inoremap jk <ESC> " jj to go back to normal mode
+inoremap kj <ESC> " jj to go back to normal mode
 
 nnoremap <M-j> :m .+1<CR>
 nnoremap <M-k> :m .-2<CR>
