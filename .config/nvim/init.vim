@@ -1,11 +1,30 @@
-call plug#begin('~/.config/nvim/plugged')
-Plug 'https://github.com/myfreeweb/intero.nvim.git'
+let g:sneak#label = 1
+
+let g:ale_linters = {
+\   'typescript': ['tsserver'],
+\}
+
+let g:airline_section_b = ''
+let g:airline_section_x = ''
+let g:airline_section_y = ''
+let g:airline_section_z = ''
+
+call plug#begin('~/.local/share/nvim/plugged')
 Plug 'https://github.com/tpope/vim-sensible.git'
 Plug 'https://github.com/vim-airline/vim-airline.git'
-Plug 'https://github.com/bitc/vim-hdevtools.git'
-Plug 'https://github.com/neomake/neomake.git'
-Plug 'https://github.com/raichoo/haskell-vim.git'
+Plug 'tpope/vim-surround'
+Plug 'airblade/vim-gitgutter'
+Plug 'justinmk/vim-sneak'
+Plug 'jacoborus/tender.vim'
+Plug 'w0rp/ale'
+Plug '~/.fzf'
+Plug 'junegunn/fzf.vim'
+
+" typescript
+Plug 'leafgarland/typescript-vim'
 call plug#end()
+
+colorscheme tender
 
 " http://nvie.com/posts/how-i-boosted-my-vim/
 let mapleader=","
@@ -55,7 +74,8 @@ set undodir=~/.vim/undo//
 set directory=~/.vim/swap//
 
 noremap ; :
-inoremap jj <ESC> " jj to go back to normal mode
+inoremap jk <ESC> " jj to go back to normal mode
+inoremap kj <ESC> " jj to go back to normal mode
 
 nnoremap <M-j> :m .+1<CR>
 nnoremap <M-k> :m .-2<CR>
