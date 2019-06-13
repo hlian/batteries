@@ -6,14 +6,12 @@
 .#*
 .DS_Store
 .ackrc
-.sw*
 flycheck_*.hs
 .ensime
 .dir-locals.*
+.hao
 
 .elasticbeanstalk/
 .stack-work/
 bower_components/
 .ensime_cache/
-
-.hao
