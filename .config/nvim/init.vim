@@ -9,6 +9,8 @@ let g:airline_section_x = ''
 let g:airline_section_y = ''
 let g:airline_section_z = ''
 
+let g:airline_theme = 'tender'
+
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'https://github.com/tpope/vim-sensible.git'
 Plug 'https://github.com/vim-airline/vim-airline.git'
@@ -19,6 +21,7 @@ Plug 'jacoborus/tender.vim'
 Plug 'w0rp/ale'
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'ap/vim-css-color'
 
 " typescript
 Plug 'leafgarland/typescript-vim'
@@ -29,6 +32,7 @@ colorscheme tender
 " http://nvie.com/posts/how-i-boosted-my-vim/
 let mapleader=","
 
+set termguicolors
 set hidden " closed buffers
 set nowrap
 set number " of the line variety
