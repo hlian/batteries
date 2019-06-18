@@ -38,13 +38,11 @@ set ch=2 " command-line height
 set laststatus=2 " always show status bar
 set wrapscan " wrap search
 set backupdir=/tmp
-set wildmenu " command-line autocompletion
 
 set ignorecase
 set smartcase
 set hlsearch
 set gdefault
-set incsearch
 set showmatch
 set hlsearch
 
@@ -56,15 +54,11 @@ nnoremap <leader><space> :noh<cr> " unhighlight
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set autoindent
 set copyindent " new lines copy previous lines' indent
 set shiftround " < and >
-set smarttab
 set expandtab
 set relativenumber " relative line number numbering for fast moves
-set backspace=indent,eol,start
 set listchars=tab:>-,trail:~,extends:>,precedes:<
-set list
 
 set history=1000
 set undolevels=1000
