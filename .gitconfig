@@ -6,6 +6,7 @@
 	pager = less --tabs=2 -RFX -x1,5
 	abbrev = 4
 	excludesfile = ~/.gitignore_global
+	editor = /Applications/Emacs.app/Contents/MacOS/Emacs -nw
 [rebase]
 	autostash = true
 	autosquash = true
@@ -48,3 +49,4 @@
 	ri = rebase --interactive
 	rc = rebase --cont
 	sigh = remote
+	work = config user.email \"hao.lian@originate.com\"
