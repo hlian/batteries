@@ -15,3 +15,4 @@ flycheck_*.hs
 .stack-work/
 bower_components/
 .ensime_cache/
+_db/
